@@ -10,7 +10,13 @@ router.route( '/' )
     let user = new User( { name: req.body.name })
 
     user.save()
-      .then(( user ) => { res.send( user ) })
+      .then(() => {
+        let userPromise = User.find().exec()
+
+        userPromise.then(( user ) => {
+          res.send( user )
+        })
+      })
   })
   .get(
   ( req: Request, res: Response ) => {

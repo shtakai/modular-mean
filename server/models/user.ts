@@ -1,5 +1,6 @@
 import { Schema, model } from 'mongoose';
 
+
 const UserSchema = new Schema({
   name: {
     type: String,
@@ -11,3 +12,4 @@ const UserSchema = new Schema({
 )
 
 export const UserModel = model( 'User', UserSchema )
+export { UserLogic } from './logic/userLogic'
