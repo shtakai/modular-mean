@@ -7,7 +7,7 @@ export class UserLogic {
 
   public createNewUser( name: string ) {
     let user = new User( { name })
-    return user.save()
+    return user.save
   }
 
 }

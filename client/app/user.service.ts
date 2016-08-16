@@ -41,6 +41,7 @@ export class UserService {
 
   private extractData( res: Response ): IUser {
     let body = res.json();
+    console.log(body)
     return body || {};
   }
 }
