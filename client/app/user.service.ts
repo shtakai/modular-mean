@@ -20,7 +20,7 @@ export class UserService {
       .catch( this.handleError )
   }
   
-  sendUserName( name: string ): Observable<IUser> {
+  sendUserName( name: string ): Observable<[IUser]> {
     let body = JSON.stringify( { name }),
       headers = new Headers( { 'Content-Type': 'application/json' }),
       options = new RequestOptions( { headers: headers })

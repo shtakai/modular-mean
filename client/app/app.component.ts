@@ -11,7 +11,7 @@ import { IUser } from './user.interface';
 
 export class AppComponent implements OnInit {
 
-  nameCollection: Array<IUser> = []
+  nameCollection: IUser[] = []
   errorMessage: string;
 
   constructor( private userService: UserService ) { }
@@ -20,12 +20,8 @@ export class AppComponent implements OnInit {
   
   getUsers() {
     this.userService.getUsers()
-      .subscribe(
-      users => {
-        users.forEach((user) => {
-        console.log(user)
-        this.nameCollection.push(user)
-        })
+      .subscribe(users => {
+        users.forEach((user) => this.nameCollection.push(user))
       },
       error => this.errorMessage = error)
   }
@@ -35,6 +31,6 @@ export class AppComponent implements OnInit {
     
     this.userService.sendUserName( name )
     .subscribe(
-      user =>  this.nameCollection.push(user),
+      user =>  this.nameCollection = user,
       error => this.errorMessage = error)}
 }
