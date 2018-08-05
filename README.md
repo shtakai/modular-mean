@@ -1,4 +1,7 @@
 # MEAN stack starter w/ TypeScript and Angular 2
+
+[![GuardRails badge](https://badges.production.guardrails.io/shtakai/modular-mean.svg)](https://www.guardrails.io)
+
 > Created by Nitish Dayal | Started: 8/12/2016
 
 **Note: This project is currently under development. I really wouldn't bother playing around just yet, I've only just gotten started and it's probably pretty broken.**
